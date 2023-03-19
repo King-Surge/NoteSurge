@@ -1,0 +1,14 @@
+Some Lines Of Code that were removed to be improved
+
+    # For the AutoSave function
+    
+    def autosave():
+        global code, file_path
+        
+        if file_path == '':
+            file_path = "Untitled.txt"
+
+        with open(file_path, "w") as file:
+            code = editor.get(1.0, END)
+            file.write(code)
+
