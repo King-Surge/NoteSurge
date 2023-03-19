@@ -45,7 +45,7 @@
 
 # Photos
 
-[First View](.\\images\\opening-view.png)
+[First View](.\images\opening-view.png)
 
 # Please Note
 
