@@ -6,13 +6,22 @@ from tkinter.scrolledtext import ScrolledText
 import tkinter.messagebox as tkm
 import os
 
+basedir = os.path.dirname(__file__)
+
+try:
+    from ctypes import windll  # Only exists on Windows.
+
+    myappid = "com.surgecorporation.surgeproductions.notesurge.v0.8.4-alpha"
+    windll.shell32.SetCurrentProcessExplicitAppUserModelID(myappid)
+except ImportError:
+    pass
+
 # start main application and command
 window = Tk()
 window.title("NoteSurge")
 
 menu = Menu(window)
 window.config(menu=menu)
-window.iconbitmap("src\icon.ico") 
 
 editor = ScrolledText(window, font=("Helvetica 14"), wrap=WORD)
 editor.pack(fill=BOTH, expand=1)
@@ -28,29 +37,15 @@ def open_file(event=None):
     open_path = askopenfilename(filetypes=[("Text File", "*.txt"), ("All Files", "*.*")])
     file_path = open_path
 
-    try:
-        with open(open_path, "w") as file:
-            code = editor.get(1.0, END)
-            file.write(code)
-            tkm.showinfo(title="Success", message="File Opened Successfully!")
-
-    except FileNotFoundError:
-         print("Just Scanning For File Path")
-
-    except IOError:
-        print("Unable To Open File! May Be Corrupted")
-        tkm.showinfo(title="Not Successful", message="We were unable to open your file successfully! It May Be Corrupted")
+    with open(open_path, "r") as file:
+        code = file.read()
+        editor.delete(1.0, END)
+        editor.insert(1.0, code)
 
     orig_path = os.path.basename(open_path)
     File_Name = os.path.splitext(orig_path)[0]
     window.title(f"{File_Name} - NoteSurge")
         
-    
-
-
-
-
-
 # create a shortcut to open file
 window.bind("<Control-o>", open_file)
 
@@ -64,13 +59,10 @@ def save_file(event=None):
     else:
         save_path = file_path
     
-    try:
-        with open(save_path, "w") as file:
+    with open(save_path, "w") as file:
             code = editor.get(1.0, END)
             file.write(code)
 
-    except FileNotFoundError:
-         print("Just Scanning For File Path")
 
     orig_path = os.path.basename(save_path)
     File_Name = os.path.splitext(orig_path)[0]
@@ -88,13 +80,10 @@ def save_as(event=None):
     save_path = asksaveasfilename(defaultextension=".txt", filetypes=[("Text File", "*.txt"), ("All Files", "*.*")])
     file_path = save_path
 
-    try:
-        with open(save_path, "w") as file:
+    with open(save_path, "w") as file:
             code = editor.get(1.0, END)
             file.write(code)
 
-    except FileNotFoundError:
-         print("Just Scanning For File Path")
 
     orig_path = os.path.basename(save_path)
     File_Name = os.path.splitext(orig_path)[0]
@@ -325,4 +314,5 @@ if file_path == "":
     if start == True:
         open_file()
 
+window.iconbitmap(os.path.join(basedir, "icon.ico"))
 window.mainloop()
