@@ -39,6 +39,13 @@
 
 * Other Features To Be Added
 
+* Font Family and Font Size Selection to be added
+
+* Color Picker to be added (Viewing Purposes Only - Not saved with file)
+
+# Photos
+
+[First View](.\\images\\opening-view.png)
 
 # Please Note
 
