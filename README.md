@@ -2,9 +2,9 @@
 
 ## What is NoteSurge?
 
-- ***NoteSurge*** is a Text Editor Designed to make the Typing Experience even Better. 
+- **_NoteSurge_** is a Text Editor Designed to make the Typing Experience even Better.
 
-- It is created to help in the basic foundation for ***Surge Operating System (Surge OS)***
+- It is created to help in the basic foundation for **_Surge Operating System (Surge OS)_**
 
 ### Features
 
@@ -22,32 +22,33 @@
 
 #### This Browser also provides some special features
 
-* This includes Highlight, Underline, Bold, and Italic. However these features do not save with your file and are just for viewing purposes
+- This includes Highlight, Underline, Bold, and Italic. However these features do not save with your file and are just for viewing purposes
 
 ## Upcoming Features
-* Tools for Format Menu to Be Added Soon
 
-* AutoSave feature to be added soon
+- Tools for Format Menu to Be Added Soon
 
-* Improvements to the New files Feature
+- AutoSave feature to be added soon
 
-* Search for and Change Occurences to Be Coming Soon
+- Improvements to the New files Feature
 
-* EXE file coming soon
+- Search for and Change Occurences to Be Coming Soon
 
-* Tab Feature Coming Soon
+- EXE file coming soon
 
-* Other Features To Be Added
+- Tab Feature Coming Soon
 
-* Font Family and Font Size Selection to be added
+- Other Features To Be Added
 
-* Color Picker to be added (Viewing Purposes Only - Not saved with file)
+- Font Family and Font Size Selection to be added
+
+- Color Picker to be added (Viewing Purposes Only - Not saved with file)
+
+- Comments for code coming soon
 
 # Photos
 
 ![First View](./images/opening-view.png)
-
-
 
 # Please Note
 
@@ -55,13 +56,10 @@
 
 2. All updates will be provided
 
-
 # Contact Information And Other Links
 
 #### At Current I can be contacted by two ways
 
-* Contact Me Via Discord: KingSurge#9182
+- Contact Me Via Discord: KingSurge#9182
 
-* Contact Me Via Email : kingsurge001@gmail.com
-
-
+- Contact Me Via Email : kingsurge001@gmail.com
